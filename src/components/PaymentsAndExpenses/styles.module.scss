@@ -1,0 +1,9 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    div{
+        border: solid 1px black;
+        border-width: 0 0px 1px 1px;
+    }
+}
