@@ -18,7 +18,7 @@ const ActivitySummary = (props: ActivitySummaryProps) => {
             <div className={classes.type}>Type</div>
             <div className={classes.columnHeaders}>
               <div>Client Name</div>
-              <div>Amount</div>
+              <div>Amount ($)</div>
               <div>Date</div>
               <div>Paid to</div>
             </div>

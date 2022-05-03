@@ -9,7 +9,7 @@ describe("ActivitySummary", function () {
 
     expect(screen.getByText("Type")).toBeInTheDocument();
     expect(screen.getByText("Client Name")).toBeInTheDocument();
-    expect(screen.getByText("Amount")).toBeInTheDocument();
+    expect(screen.getByText("Amount ($)")).toBeInTheDocument();
     expect(screen.getByText("Date")).toBeInTheDocument();
     expect(screen.getByText("Paid to")).toBeInTheDocument();
   });
