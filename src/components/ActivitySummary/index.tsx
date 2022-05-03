@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from "clsx";
 import classes from "./styles.module.scss";
 import PaymentsAndExpenses from '../PaymentsAndExpenses/index';
 import { Payment, Expense } from "../../data";
@@ -12,7 +13,7 @@ const ActivitySummary = (props: ActivitySummaryProps) => {
   const { paymentsData, expenseData } = props;
 
     return <div className={classes.container}>
-        Financial Tracker 
+        <div className={classes.header}>Financial Tracker</div>
         <div className={classes.grid}>
             <div className={classes.type}>Type</div>
             <div className={classes.columnHeaders}>
@@ -22,7 +23,7 @@ const ActivitySummary = (props: ActivitySummaryProps) => {
               <div>Paid to</div>
             </div>
             {paymentsData.length > 0 ? <div 
-              className={classes.payment}
+              className={clsx(classes.types, classes.payment)}
               //assign dynamic styles based on data
               style={{gridRowEnd: paymentsData.length+2}}
             >
@@ -32,7 +33,7 @@ const ActivitySummary = (props: ActivitySummaryProps) => {
             <PaymentsAndExpenses expenseData = {expenseData} paymentsData = {paymentsData} />
            
             {expenseData.length ? <div
-              className={classes.expenses}
+              className={clsx(classes.types, classes.expenses)}
               //assign dynamic styles based on data
               style={{
                 gridRowStart: paymentsData.length + 2,
